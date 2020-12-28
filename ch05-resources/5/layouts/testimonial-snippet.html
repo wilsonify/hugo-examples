@@ -1,0 +1,22 @@
+{{with .Page.Params.testimonials}}
+<section>
+  <article>
+    <h1>Our clients</h1>
+    <div class="testimonials">
+      <ol>
+        {{range .}}
+        <li>
+          <details>
+            <summary>
+              <h3>{{.author | title}}</h3>
+            </summary>
+            <p>{{.content}}</p>
+          </details>
+        </li>
+        {{end}}
+      </ol>
+      <small>Click each to see testimonials.</small>
+    </div>
+  </article>
+</section>
+{{end}}

@@ -1,0 +1,8 @@
+{{$count := default 5 (default (.Get 0) (.Get "count"))}}
+{{if $count > 0}}
+<ul>
+  {{$i := range (seq $count)}}
+  <li>{{.Inner}}</li>
+  {{end}}
+  {{end}}
+</ul>
